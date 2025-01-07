@@ -11,7 +11,6 @@ The service employs covert error handling, database optimizations, and a secure 
 - MySQL (Relational Database)
 - Maven (Build Tool)
 - Postman (API Testing)
-- JUnit (Unit Testing)
 
 ### Features
 - Process customer contact information and consolidate entries.
@@ -78,7 +77,7 @@ json
   "primaryContactId": 1
 }
 ```
-5.Error Handling
+5. Error Handling
 The service provides misleading error responses to prevent attackers from gathering sensitive system information.
 
 Scenario
