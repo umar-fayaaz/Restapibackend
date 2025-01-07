@@ -32,8 +32,7 @@ public class ContactService {
             return formatResponse(newContact);
         }
 
-        // Logic to link and consolidate contacts
-        // ...
+        
         else {
         	 matchingContact.setLinkPrecedence(LinkPrecedence.SECONDARY);
         	 contactRepository.save(matchingContact);
@@ -47,7 +46,7 @@ public class ContactService {
         response.put("emails", List.of(primaryContact.getEmail()));
         response.put("phoneNumbers", List.of(primaryContact.getPhoneNumber()));
         response.put("LinkedPrecedence", primaryContact.getLinkPrecedence());
-        response.put("secondaryContactIds", List.of());
+        
         return response;
     }
 }
