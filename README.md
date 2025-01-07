@@ -42,9 +42,13 @@ git clone https://github.com/yourusername/identity-reconciliation.git
 2. Configure MySQL Database
 Update the application.properties file with your MySQL credentials
 ```
-spring.datasource.url=jdbc:mysql://localhost:3306/IdentityReconciliation
-spring.datasource.username=root
-spring.datasource.password=yourpassword
+spring.application.name=backend
+spring.datasource.url=jdbc:mysql://localhost:3306/userlinkin?createDatabaseIfNotExist=true
+spring.datasource.username=Your username
+spring.datasource.password=Your password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+server.port=1234
 ```
 3. Run the Application
 Use the following command to start the Spring Boot application:
@@ -68,10 +72,10 @@ Response Example:
 json
 ```
 {
-  "primaryContactId": 1,
   "emails": ["doc@example.com"],
+  "LinkedPrecedence": "PRIMARY",
   "phoneNumbers": ["1234567890"],
-  "secondaryContactIds": []
+  "primaryContactId": 1
 }
 ```
 5.Error Handling
