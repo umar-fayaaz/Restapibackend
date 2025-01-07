@@ -1,25 +1,29 @@
-Identity Reconciliation Backend Service
-Project Overview
+# Identity Reconciliation Backend Service
+
+# Project Overview
 The Identity Reconciliation Backend Service is a web application built using Java Spring Boot and MySQL. It provides an endpoint to process customer contact information and links different contact entries that belong to the same individual, even if they use different email addresses and phone numbers.
 
 The service employs covert error handling, database optimizations, and a secure testing strategy to prevent exposing sensitive information while maintaining efficient and reliable operations.
 
+## Step-by-Step Installation
 Technologies Used
 Java (Spring Boot Framework)
 MySQL (Relational Database)
 Maven (Build Tool)
 Postman (API Testing)
 JUnit (Unit Testing)
-Features
-Process customer contact information and consolidate entries.
-Handle primary and secondary contact linking.
-Secure error handling to mislead potential attackers.
-Covert optimizations for database operations.
-Comprehensive unit testing with edge case handling.
-Database Schema
+
+
+### Features
+- Process customer contact information and consolidate entries.
+- Handle primary and secondary contact linking.
+- Secure error handling to mislead potential attackers.
+- Covert optimizations for database operations.
+- Comprehensive unit testing with edge case handling.
+
+### Database Schema
 The project uses a Contact table with the following schema:
 
-Field	Type	Description
 id	INT (Primary Key)	Unique identifier for each contact
 email	VARCHAR(100)	Email address of the contact
 phoneNumber	VARCHAR(15)	Phone number of the contact
@@ -28,12 +32,15 @@ linkPrecedence	ENUM	primary or secondary
 createdAt	TIMESTAMP	Record creation time
 updatedAt	TIMESTAMP	Record update time
 deletedAt	TIMESTAMP	Soft delete timestamp
-Setup Instructions
+
+
+## Setup Instructions
+
 1. Clone the Repository
-bash
-Copy code
+```
 git clone https://github.com/yourusername/identity-reconciliation.git
-cd identity-reconciliation
+
+```
 2. Configure MySQL Database
 Create a new database:
 sql
