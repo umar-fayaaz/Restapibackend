@@ -37,7 +37,7 @@ The project uses a Contact table with the following schema:
 
 1. Clone the Repository
 ```
-git clone [https://github.com/yourusername/identity-reconciliation.git](https://github.com/umar-fayaaz/Restapibackend.git)
+git clone https://github.com/umar-fayaaz/Restapibackend.git
 ```
 2. Configure MySQL Database
 Update the application.properties file with your MySQL credentials
